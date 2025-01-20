@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productStyles.css">
+    <title>CONFUSION</title>
+</head>
+<body>
+
+    <div id="side">
+        <img id="logo" src="logo.png">
+        <div id="inhold">
+            <div id="galery">
+                <button class="glrBtn" id="leftBtn" onclick="navn(-1)">◀️</button>
+                <button class="glrBtn" id="rightBtn" onclick="navn(+1)">▶️</button>
+                <img id="image" src="album4/1.jpg">
+            </div>
+
+            <script>
+                var firstSlide = 1;
+                var slide = 1;
+                var numberSlides = 2;
+    
+                function navn(retning){
+                    var galery = document.getElementById("image");
+                    var nextSlide = slide + retning;
+        
+                    if (slide == firstSlide && retning == -1) {
+                        nextSlide = numberSlides;
+                    }
+        
+                    if (slide == numberSlides && retning == +1) {
+                        nextSlide = firstSlide;
+                    }
+        
+                    galery.src = "album4/" + nextSlide + ".jpg";
+                    slide = nextSlide;
+                }
+    
+            </script>
+            <div id="info">
+                <h1 class="musik">CONFUSION</h1>
+                <div class="text">
+                    <p>The album Confusion explores the complexities of the human experience, blending neutral tones with ambiguous emotions. Each track invites listeners to navigate the intricate landscapes of uncertainty and introspection, creating a thought-provoking and multifaceted journey.</p>
+                    <ul>
+                        <li>Things That Cannot Be Undone - This introspective opener delves into the weight of past choices. Its haunting melodies and reflective lyrics evoke a sense of melancholy, inviting listeners to confront their regrets.</li>
+                        <li>The Eighth Sin - A provocative exploration of morality, this track challenges conventional notions of right and wrong. With its dark undertones and compelling rhythm, it leaves listeners pondering the nature of guilt and redemption.</li>
+                        <li>Devil's Child - This edgy piece embodies the struggle between light and darkness. Its powerful instrumentation and raw vocals create an atmosphere of tension, reflecting the duality of human nature.</li>
+                        <li>Miracle - A moment of unexpected hope amidst the confusion, this track offers a glimmer of light. Its ethereal melodies and uplifting lyrics encourage listeners to find beauty in uncertainty and embrace the possibilities that lie ahead.</li>
+                    </ul>
+                    <p>Together, these songs weave a rich tapestry of emotion and thought, making Confusion a captivating exploration of life's complexities.</p>
+                </div>
+                
+            </div>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ"><button class="url">BUY NOW!</button></a>
+        </div>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ">
+            <div id="add">
+                <button id="x">x</button>
+                <button id="question">?</button>
+                <p id="addDescription">Do you want to master your Google-fu?<br>
+                Then click and begin with our free* courses.</p>
+                <img src="add_icon.png" id="addIcon">
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

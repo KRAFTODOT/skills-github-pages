@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productStyles.css">
+    <title>FREEFALL</title>
+</head>
+<body>
+
+    <div id="side">
+        <img id="logo" src="logo.png">
+        <div id="inhold">
+            <div id="galery">
+                <button class="glrBtn" id="leftBtn" onclick="navn(-1)">◀️</button>
+                <button class="glrBtn" id="rightBtn" onclick="navn(+1)">▶️</button>
+                <img id="image" src="album2/1.jpg">
+            </div>
+
+            <script>
+                var firstSlide = 1;
+                var slide = 1;
+                var numberSlides = 2;
+    
+                function navn(retning){
+                    var galery = document.getElementById("image");
+                    var nextSlide = slide + retning;
+        
+                    if (slide == firstSlide && retning == -1) {
+                        nextSlide = numberSlides;
+                    }
+        
+                    if (slide == numberSlides && retning == +1) {
+                        nextSlide = firstSlide;
+                    }
+        
+                    galery.src = "album2/" + nextSlide + ".jpg";
+                    slide = nextSlide;
+                }
+    
+            </script>
+            <div id="info">
+                <h1 class="musik">FREEFALL</h1>
+                <div class="text">
+                    <p>The album FREEFALL takes listeners on a haunting journey through the depths of the human experience. With a sonic landscape drenched in dark tones, each track invites introspection and contemplation.</p>
+                    <ul>
+                        <li>3 AM - This opener sets a restless mood, exploring the thoughts that surface in the stillness of the night. Its eerie melodies and driving beats create a sense of urgency and vulnerability.</li>
+                        <li>Dear Nightmare - A poignant letter to one's fears, this track blends haunting lyrics with a moody atmosphere. It navigates the struggle between confronting inner demons and succumbing to them.</li>
+                        <li>Overflow - As emotions spill over, this piece captures the essence of overwhelming feelings. Its layered instrumentation mirrors the chaos of thoughts and sensations that can consume us.</li>
+                        <li>[BLANK] - An introspective interlude that offers a moment of silence in the chaos. This track allows listeners to pause and reflect, emphasizing the theme of searching for meaning amidst uncertainty.</li>
+                    </ul>
+                    <p>Together, these songs weave a powerful narrative about life's complexities, making FREEFALL a thought-provoking listening experience.</p>
+                </div>
+                
+            </div>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ"><button class="url">BUY NOW!</button></a>
+        </div>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ">
+            <div id="add">
+                <button id="x">x</button>
+                <button id="question">?</button>
+                <p id="addDescription">Do you want to master your Google-fu?<br>
+                Then click and begin with our free* courses.</p>
+                <img src="add_icon.png" id="addIcon">
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

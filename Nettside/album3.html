@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productStyles.css">
+    <title>LANDING</title>
+</head>
+<body>
+
+    <div id="side">
+        <img id="logo" src="logo.png">
+        <div id="inhold">
+            <div id="galery">
+                <button class="glrBtn" id="leftBtn" onclick="navn(-1)">◀️</button>
+                <button class="glrBtn" id="rightBtn" onclick="navn(+1)">▶️</button>
+                <img id="image" src="album3/1.jpg">
+            </div>
+
+            <script>
+                var firstSlide = 1;
+                var slide = 1;
+                var numberSlides = 2;
+    
+                function navn(retning){
+                    var galery = document.getElementById("image");
+                    var nextSlide = slide + retning;
+        
+                    if (slide == firstSlide && retning == -1) {
+                        nextSlide = numberSlides;
+                    }
+        
+                    if (slide == numberSlides && retning == +1) {
+                        nextSlide = firstSlide;
+                    }
+        
+                    galery.src = "album3/" + nextSlide + ".jpg";
+                    slide = nextSlide;
+                }
+    
+            </script>
+            <div id="info">
+                <h1 class="musik">LANDING</h1>
+                <div class="text">
+                    <p>The album Landing captures the essence of dynamic joy and exploration, blending vibrant energy with uplifting melodies. While echoing the warmth of Sweet Dreams, this collection takes listeners on a more exhilarating journey through cherished moments and vibrant experiences.</p>
+                    <ul>
+                        <li>Priceless Minutes - This energetic opener celebrates the fleeting nature of time. With its infectious rhythm and bright instrumentation, it invites listeners to savor every precious moment.</li>
+                        <li>Waterflood - A refreshing rush of sound, this track embodies the exhilarating feeling of letting go. Its rhythmic flow and playful melodies create a sense of freedom and adventure, as if riding the waves of life.</li>
+                        <li>Childhood - A nostalgic tribute to the innocence and wonder of youth, this piece combines vibrant soundscapes with evocative lyrics. It captures the magic of carefree days and the joy of imagination.</li>
+                        <li>Eternal Memories - This poignant finale weaves together themes of nostalgia and hope. Its uplifting melodies and heartfelt harmonies remind us of the beauty of past experiences while inspiring a sense of forward-looking optimism.</li>
+                    </ul>
+                    <p>Together, these tracks form a vibrant tapestry of emotion and energy, making Landing an exhilarating and heartwarming listening experience.</p>
+                </div>
+                
+            </div>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ"><button class="url">BUY NOW!</button></a>
+        </div>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ">
+            <div id="add">
+                <button id="x">x</button>
+                <button id="question">?</button>
+                <p id="addDescription">Do you want to master your Google-fu?<br>
+                Then click and begin with our free* courses.</p>
+                <img src="add_icon.png" id="addIcon">
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

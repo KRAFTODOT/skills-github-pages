@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productStyles.css">
+    <title>GOOD MORNING</title>
+</head>
+<body>
+
+    <div id="side">
+        <img id="logo" src="logo.png">
+        <div id="inhold">
+            <div id="galery">
+                <button class="glrBtn" id="leftBtn" onclick="navn(-1)">◀️</button>
+                <button class="glrBtn" id="rightBtn" onclick="navn(+1)">▶️</button>
+                <img id="image" src="album5/1.jpg">
+            </div>
+
+            <script>
+                var firstSlide = 1;
+                var slide = 1;
+                var numberSlides = 2;
+    
+                function navn(retning){
+                    var galery = document.getElementById("image");
+                    var nextSlide = slide + retning;
+        
+                    if (slide == firstSlide && retning == -1) {
+                        nextSlide = numberSlides;
+                    }
+        
+                    if (slide == numberSlides && retning == +1) {
+                        nextSlide = firstSlide;
+                    }
+        
+                    galery.src = "album5/" + nextSlide + ".jpg";
+                    slide = nextSlide;
+                }
+    
+            </script>
+
+            <div id="info">
+                <h1 class="musik">GOOD MORNING</h1>
+                <div class="text">
+                    <p>The album Good Morning serves as a heartfelt conclusion to the musical journey, leaving listeners with a sense of warmth and fulfillment. With its uplifting melodies and positive vibes, this collection celebrates cherished memories and the beauty of new beginnings.</p>
+                    <ul>
+                        <li>Home, Sweet Home - This inviting opener evokes feelings of comfort and belonging. With its soothing harmonies and nostalgic lyrics, it paints a picture of safe spaces and the joy of returning to loved ones.</li>
+                        <li>The End - A reflective piece that embraces closure, this track balances a bittersweet farewell with a sense of gratitude. Its gentle melodies and heartfelt sentiments remind listeners to cherish the moments that have shaped their journey.</li>
+                        <li>Sunny Bunny - A playful, vibrant anthem, this song radiates joy and positivity. Its catchy hooks and bright instrumentation encourage listeners to celebrate life's little pleasures and find happiness in everyday moments.</li>
+                        <li>Good, Lucky, Fancy Life - The uplifting finale encapsulates the essence of hope and optimism. With its infectious energy and celebratory lyrics, it inspires listeners to embrace their own journeys and look forward to what lies ahead.</li>
+                    </ul>
+                    <p>Together, these tracks create a beautiful tapestry of memories and emotions, making Good Morning a fitting and joyful conclusion to the musical experience.</p>
+                </div>
+                
+            </div>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ"><button class="url">BUY NOW!</button></a>
+        </div>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ">
+            <div id="add">
+                <button id="x">x</button>
+                <button id="question">?</button>
+                <p id="addDescription">Do you want to master your Google-fu?<br>
+                Then click and begin with our free* courses.</p>
+                <img src="add_icon.png" id="addIcon">
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

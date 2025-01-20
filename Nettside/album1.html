@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productStyles.css">
+    <title>SWEET DREAMS</title>
+</head>
+<body>
+
+    <div id="side">
+        <img id="logo" src="logo.png">
+        <div id="inhold">
+            <div id="galery">
+                <button class="glrBtn" id="leftBtn" onclick="navn(-1)">◀️</button>
+                <button class="glrBtn" id="rightBtn" onclick="navn(+1)">▶️</button>
+                <img id="image" src="album1/1.jpg">
+            </div>
+
+            <script>
+                var firstSlide = 1;
+                var slide = 1;
+                var numberSlides = 2;
+    
+                function navn(retning){
+                    var galery = document.getElementById("image");
+                    var nextSlide = slide + retning;
+        
+                    if (slide == firstSlide && retning == -1) {
+                        nextSlide = numberSlides;
+                    }
+        
+                    if (slide == numberSlides && retning == +1) {
+                        nextSlide = firstSlide;
+                    }
+        
+                    galery.src = "album1/" + nextSlide + ".jpg";
+                    slide = nextSlide;
+                }
+    
+            </script>
+            <div id="info">
+                <h1 class="musik">SWEET DREAMS</h1>
+                <div class="text">
+                    <p>The album Sweet Dreams is a vibrant celebration of joy and tranquility, designed to evoke uplifting emotions and serene moments. With its bright tones and soothing melodies, each track invites listeners into a world of comfort and bliss.</p>
+                    <ul>
+                        <li>Sleep Tight - This opening track wraps you in a warm embrace, setting a gentle tone for the album. Its soft harmonies and tender lyrics create a sense of peace, perfect for winding down.</li>
+                        <li>Music Box - With delicate melodies reminiscent of childhood memories, this enchanting piece transports listeners to a whimsical realm. The intricate layers of sound evoke feelings of nostalgia and innocence.</li>
+                        <li>Lullaby - A soothing serenade that cradles the listener in tranquility. Its calming rhythm and heartfelt lyrics provide a moment of respite, making it the perfect soundtrack for drifting off to sleep.</li>
+                        <li>Second Side - This uplifting finale encourages listeners to embrace new beginnings. With its infectious energy and bright instrumentation, it inspires a sense of hope and the joy of possibilities.</li>
+                    </ul>
+                    <p>Together, these songs create a harmonious tapestry of positivity, making Sweet Dreams an inviting and heartwarming experience.</p>
+                </div>
+                
+            </div>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ"><button class="url">BUY NOW!</button></a>
+        </div>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rsBymmaq3OF6NXUZ">
+            <div id="add">
+                <button id="x">x</button>
+                <button id="question">?</button>
+                <p id="addDescription">Do you want to master your Google-fu?<br>
+                Then click and begin with our free* courses.</p>
+                <img src="add_icon.png" id="addIcon">
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
